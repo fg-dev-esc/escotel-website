@@ -254,8 +254,31 @@ const HomeModule = {
     console.log('📊 Contadores de estadísticas inicializados:', counters.length);
   },
 
-  // animar contador individual
+  // animar contador individual usando CountUp.js si está disponible
   animateCounter(element, target) {
+    if (typeof CountUp !== 'undefined') {
+      // usar CountUp.js si está disponible
+      const countUp = new CountUp(element, target, {
+        duration: this.config.counterAnimationDuration / 1000,
+        separator: ',',
+        decimal: '.',
+        suffix: ''
+      });
+      
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+        this.fallbackCounter(element, target);
+      }
+    } else {
+      // fallback manual
+      this.fallbackCounter(element, target);
+    }
+  },
+
+  // contador manual como fallback
+  fallbackCounter(element, target) {
     const duration = this.config.counterAnimationDuration;
     const start = 0;
     const increment = target / (duration / 16);
