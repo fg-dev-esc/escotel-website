@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="https://www.escotel.com.mx/images/apple-touch-icon-57x57.png">
+  <title>ESCOTEL - Excelencia en Asistencia</title>
+
+  <!-- Fuentes y librerías de iconos -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="./assets/css/escotel-styles.css" />
+</head>
+
+<body class="index-page bg-gray-200">
+
+  <!-- Barra de navegación -->
+  <div id="navbar-container"></div>
+
+  <!-- Contenido principal -->
+  <main id="main-content">
+    
+    <!-- Sección Hero -->
+    <section class="hero-section" aria-label="Presentación principal">
+      <header class="header-2">
+        <div class="page-header min-vh-75 relative slider-container" style="margin-top: 70px;">
+          
+          <!-- Slider de imágenes -->
+          <div class="slider-backgrounds" role="region" aria-label="Carrusel de imágenes">
+            <div class="slide active"
+                 style="background-image: url('https://www.usat.edu.pe/web/wp-content/uploads/2023/01/la-familia.jpg')"
+                 data-texto-superior="Estamos contigo" 
+                 data-texto-principal="EN LA PROTECCIÓN DE TU SALUD"
+                 data-texto-secundario=""
+                 role="img"
+                 aria-label="Familia unida - Protección de salud">
+            </div>
+            <div class="slide"
+                 style="background-image: url('https://cdn2.hubspot.net/hubfs/533390/Blogs_Fotos/Familia_y_Sociedad/Familia-Hospitalidad.jpg')"
+                 data-texto-superior="Estamos contigo" 
+                 data-texto-principal="EN LA PLENITUD DE TU VIDA"
+                 data-texto-secundario=""
+                 role="img"
+                 aria-label="Familia feliz - Plenitud de vida">
+            </div>
+            <div class="slide"
+                 style="background-image: url('https://chilepsicologos.cl/wp-content/uploads/2024/04/familia-1-scaledfamiliacrisis-de-familia-scaledfamilias-felices-scaled-1.jpg')"
+                 data-texto-superior="Excelencia en Asistencia" 
+                 data-texto-principal="ESCOTEL" 
+                 data-texto-secundario=""
+                 role="img"
+                 aria-label="Familias felices - ESCOTEL">
+            </div>
+          </div>
+
+          <!-- Overlay -->
+          <span class="mask bg-gradient-dark opacity-4" aria-hidden="true"></span>
+          
+          <!-- Contenido del Hero -->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-md-10 text-center mx-auto">
+                <p class="lead text-white mt-3" id="texto-superior">Estamos contigo</p>
+                <h1 class="text-white display-4 font-weight-bold pt-3" id="texto-principal">
+                  EN LA PROTECCIÓN DE TU SALUD
+                </h1>
+                <p class="text-white h4 mt-2" id="texto-secundario"></p>
+                
+                <!-- Controles del Slider -->
+                <div class="slider-controls mt-4" role="group" aria-label="Controles del carrusel">
+                  <!-- Los controles se generarán dinámicamente -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- Sección de estadísticas -->
+    <section class="statistics-section" aria-label="Nuestros números">
+      <div class="container mt-n6">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <div class="glass-effect border-radius-xl p-4 mx-3 mx-md-4">
+              <div class="py-4" id="count-stats">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                      <div class="row">
+                        
+                        <!-- Estadística: Llamadas -->
+                        <div class="col-md-3 position-relative animate__animated animate__fadeInUp animate__delay-1s">
+                          <article class="stat-item p-3 text-center">
+                            <h2 class="text-gradient text-dark">
+                              <span id="state1" countTo="450000" aria-label="450,000 llamadas">0</span>
+                            </h2>
+                            <h3 class="h5 mt-3 text-gradient">Llamadas Anuales</h3>
+                            <p class="text-sm font-weight-normal opacity-8">
+                              Atendemos cientos de miles de llamadas cada año
+                            </p>
+                          </article>
+                        </div>
+                        
+                        <!-- Estadística: Personas -->
+                        <div class="col-md-3 position-relative animate__animated animate__fadeInUp animate__delay-2s">
+                          <article class="stat-item p-3 text-center">
+                            <h2 class="text-gradient text-dark">
+                              <span id="state2" countTo="2000000" aria-label="2 millones de personas">0</span>
+                            </h2>
+                            <h3 class="h5 mt-3 text-gradient">Personas Cubiertas</h3>
+                            <p class="text-sm font-weight-normal opacity-8">
+                              Millones de personas confían en nuestros servicios
+                            </p>
+                          </article>
+                        </div>
+                        
+                        <!-- Estadística: Hogares -->
+                        <div class="col-md-3 position-relative animate__animated animate__fadeInUp animate__delay-3s">
+                          <article class="stat-item p-3 text-center">
+                            <h2 class="text-gradient text-dark">
+                              <span id="state3" countTo="5000" aria-label="5,000 hogares">0</span>
+                            </h2>
+                            <h3 class="h5 mt-3 text-gradient">Hogares</h3>
+                            <p class="text-sm font-weight-normal opacity-8">
+                              Miles de hogares protegidos día a día
+                            </p>
+                          </article>
+                        </div>
+                        
+                        <!-- Estadística: Continentes -->
+                        <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-4s">
+                          <article class="stat-item p-3 text-center">
+                            <h2 class="text-gradient text-dark">
+                              <span id="state4" countTo="5" aria-label="5 continentes">5</span>
+                            </h2>
+                            <h3 class="h5 mt-3 text-gradient">Continentes</h3>
+                            <p class="text-sm font-weight-normal opacity-8">
+                              Presencia global en servicios de asistencia
+                            </p>
+                          </article>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección fortalezas -->
+    <section class="strengths-section mt-sm-5" aria-label="Nuestras fortalezas">
+      <div class="container">
+        <div class="page-header py-8 py-md-7 my-sm-4 mb-4 glass-effect border-radius-xl position-relative overflow-hidden"
+             style="background-image: url('https://cdn2.hubspot.net/hubfs/533390/Blogs_Fotos/Familia_y_Sociedad/Familia-Hospitalidad.jpg'); background-position: 65% 15%; background-size: cover; min-height: 400px;"
+             loading="lazy"
+             role="img"
+             aria-label="Familia en hospitalidad">
+          
+          <span class="mask bg-gradient-dark opacity-4" aria-hidden="true"></span>
+          
+          <div class="container h-100 position-relative" style="z-index: 2;">
+            <div class="row h-100 align-items-center">
+              <div class="col-lg-5 offset-lg-6 col-md-8 ms-auto pe-lg-5 text-end">
+                <h2 class="text-white mb-3 display-5 fw-bold">Fortalezas</h2>
+                <p class="lead text-white opacity-9 mb-4" style="font-size: 1.25rem;">
+                  Nuestra razón de ser son las personas. Facilitamos la comunicación personal
+                  con el mundo entero. Vivimos para ello, y lo hacemos con profesionalismo.
+                </p>
+                <div class="d-flex justify-content-end">
+                  <a href="views/company/fortalezas.html" 
+                     class="btn btn-outline-white btn-lg mt-2 hover-lift"
+                     aria-label="Conoce más sobre nuestras fortalezas">
+                    Conócenos
+                    <i class="fas fa-arrow-right ms-2" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section class="services-section py-5" aria-label="Nuestros servicios">
+      <div class="container">
+        
+        <!-- Encabezado de servicios -->
+        <header class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-5 fw-bold text-gradient mb-3">Nuestros Servicios</h2>
+            <p class="lead opacity-8">
+              Soluciones integrales para todas tus necesidades de asistencia
+            </p>
+          </div>
+        </header>
+        
+        <!-- Grid de servicios -->
+        <div class="row g-4">
+          
+          <!-- Servicio: Asistencia Médica -->
+          <article class="col-lg-4">
+            <div class="card-service glass-effect border-radius-xl overflow-hidden position-relative h-100 hover-lift">
+              <div class="card-bg"
+                   style="background-image: url('https://quanticoservicios.net/wp-content/uploads/2023/02/atencion_medica_local.jpg')"
+                   role="img"
+                   aria-label="Atención médica local">
+              </div>
+              <div class="card-content p-4 position-relative z-index-2 d-block d-md-flex">
+                <i class="material-symbols-rounded text-primary text-3xl" aria-hidden="true">medical_services</i>
+                <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+                  <h3 class="h5 text-primary">Asistencia Médica</h3>
+                  <p class="text-dark opacity-8">
+                    Servicios médicos profesionales disponibles 24/7.
+                  </p>
+                  <a href="views/services/soluciones.html" 
+                     class="text-primary icon-move-right stretched-link"
+                     aria-label="Ver más sobre asistencia médica">
+                    Ver más
+                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio: Asistencia Vial -->
+          <article class="col-lg-4">
+            <div class="card-service glass-effect border-radius-xl overflow-hidden position-relative h-100 hover-lift">
+              <div class="card-bg"
+                   style="background-image: url('https://www.rastreador.mx/wp-content/uploads/asistencia-vial-hdi.png')"
+                   role="img"
+                   aria-label="Asistencia vial HDI">
+              </div>
+              <div class="card-content p-4 position-relative z-index-2 d-block d-md-flex">
+                <i class="material-symbols-rounded text-primary text-3xl" aria-hidden="true">car_repair</i>
+                <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+                  <h3 class="h5 text-primary">Asistencia Vial</h3>
+                  <p class="text-dark opacity-8">
+                    Soporte vial inmediato en carretera.
+                  </p>
+                  <a href="views/services/soluciones.html" 
+                     class="text-primary icon-move-right stretched-link"
+                     aria-label="Ver más sobre asistencia vial">
+                    Ver más
+                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio: Más Soluciones -->
+          <article class="col-lg-4">
+            <div class="card-service glass-effect border-radius-xl overflow-hidden position-relative h-100 hover-lift">
+              <div class="card-bg"
+                   style="background-image: url('https://pastorjonatan.com/wp-content/uploads/2019/10/ingredientes-para-una-familia-feliz.jpg')"
+                   role="img"
+                   aria-label="Familia feliz">
+              </div>
+              <div class="card-content p-4 position-relative z-index-2 d-block d-md-flex">
+                <i class="material-symbols-rounded text-primary text-3xl" aria-hidden="true">family_restroom</i>
+                <div class="ps-0 ps-md-3 mt-3 mt-md-0">
+                  <h3 class="h5 text-primary">Más soluciones</h3>
+                  <p class="text-dark opacity-8">
+                    Coberturas adicionales para tu protección.
+                  </p>
+                  <a href="views/services/soluciones.html" 
+                     class="text-primary icon-move-right stretched-link"
+                     aria-label="Ver todas las soluciones">
+                    Ver todas
+                    <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Contenedores para componentes -->
+  <div id="logos-container"></div>
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <script src="./shared/js/app.js"></script>
+  <script src="./shared/components/navbar/navbar.js"></script>
+  <script src="./shared/components/logos/logos.js"></script>
+  <script src="./shared/components/footer/footer.js"></script>
+  <script src="./views/home/js/home-init.js"></script>
+
+</body>
+
+</html>
