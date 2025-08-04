@@ -194,8 +194,14 @@ function setupFooterAnimations() {
 
 // detectar ubicación y cargar footer
 function initFooter() {
-  const isInViews = window.location.pathname.includes('/views/');
-  const basePath = isInViews ? '../../' : './';
+  const path = window.location.pathname;
+  let basePath = './';
+  
+  // Detectar si estamos en una subcarpeta de views
+  if (path.includes('/views/')) {
+    basePath = '../../';
+  }
+  
   loadFooter(basePath);
 }
 

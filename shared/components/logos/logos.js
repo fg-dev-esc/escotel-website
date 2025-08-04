@@ -145,8 +145,13 @@ function setupLogosAnimations() {
 function loadLogos() {
   const logosContainer = document.getElementById('logos-container');
   if (logosContainer) {
-    const isInViews = window.location.pathname.includes('/views/');
-    const basePath = isInViews ? '../../' : './';
+    const path = window.location.pathname;
+    let basePath = './';
+    
+    // Detectar si estamos en una subcarpeta de views
+    if (path.includes('/views/')) {
+      basePath = '../../';
+    }
     
     logosContainer.innerHTML = loadLogosSection(basePath);
     

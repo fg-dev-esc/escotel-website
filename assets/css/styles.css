@@ -1,0 +1,238 @@
+/* Variables Globales */
+:root {
+    /* Colores */
+    --color-primary: #826768;
+    --color-secondary: #A2948A;
+    --color-light: #F5F3F2;
+    --color-dark: #495057;
+    --color-gray: #ABABAD;
+    
+    /* Sombras */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.15);
+    
+    /* Transiciones */
+    --transition-standard: all 0.3s ease;
+    --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Efectos de vidrio */
+    --glass-bg: rgba(245, 243, 242, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(20px);
+}
+
+/* Reset y Estilos Base */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efectos Generales */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+}
+
+.hover-lift {
+    transition: var(--transition-standard);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Navbar Unificado */
+.navbar-unified {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    transition: var(--transition-standard);
+}
+
+.navbar-unified .navbar-brand img {
+    height: 40px;
+    transition: var(--transition-standard);
+}
+
+.navbar-unified .nav-link {
+    color: var(--color-dark);
+    transition: var(--transition-standard);
+}
+
+.navbar-unified .nav-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.navbar-unified .btn-contact {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    transition: var(--transition-standard);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-unified .btn-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.navbar-unified .btn-contact:hover::before {
+    left: 100%;
+}
+
+/* Logo Grid */
+.logos-section-unified {
+    padding: 60px 0;
+    background: var(--glass-bg);
+    position: relative;
+}
+
+.logos-grid-unified {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 32px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logos-grid-unified .logo-item {
+    transition: var(--transition-standard);
+    opacity: 0;
+    animation: logoAppear 0.5s ease forwards;
+}
+
+.logos-grid-unified .logo-item img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: var(--transition-standard);
+}
+
+.logos-grid-unified .logo-item:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* Footer Unificado */
+.footer-unified {
+    background: var(--color-light);
+    padding: 80px 0 20px;
+    position: relative;
+}
+
+.footer-unified .footer-section h6 {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.footer-unified .footer-link {
+    color: var(--color-dark);
+    transition: var(--transition-standard);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-unified .footer-link:hover {
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.footer-unified .social-icon {
+    color: var(--color-dark);
+    transition: var(--transition-standard);
+    opacity: 0.7;
+}
+
+.footer-unified .social-icon:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+.footer-unified .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    transition: var(--transition-standard);
+}
+
+.footer-unified .contact-item:hover {
+    transform: translateX(5px);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clases de Animación */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInUp { animation-name: fadeInUp; }
+.animate__delay-1s { animation-delay: 0.5s; }
+.animate__delay-2s { animation-delay: 1s; }
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .navbar-unified .navbar-nav {
+        padding: 1rem 0;
+    }
+    
+    .logos-grid-unified {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-unified .footer-section {
+        margin-bottom: 2rem;
+    }
+    
+    .logos-grid-unified {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-unified .btn-contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}

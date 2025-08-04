@@ -185,8 +185,14 @@ function setupMobileNavigation() {
 
 // detectar ubicación y cargar navbar
 function initNavbar() {
-  const isInViews = window.location.pathname.includes('/views/');
-  const basePath = isInViews ? '../../' : './';
+  const path = window.location.pathname;
+  let basePath = './';
+  
+  // Detectar si estamos en una subcarpeta de views
+  if (path.includes('/views/')) {
+    basePath = '../../';
+  }
+  
   loadNavbar(basePath);
 }
 

@@ -1,0 +1,808 @@
+/* Estilos para la sección de Contacto */
+.contacto-section {
+    background: linear-gradient(135deg, #F5F3F2 0%, #ABABAD 100%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(130, 103, 104, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(162, 148, 138, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.contacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.contacto-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.contacto-title {
+    color: #826768;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #826768 0%, #A2948A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contacto-subtitle {
+    color: #826768;
+    font-size: 1.25rem;
+    font-weight: 400;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contacto-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contacto-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.contacto-card, 
+.contacto-form-container {
+    background: rgba(245, 243, 242, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 8px 32px rgba(130, 103, 104, 0.1),
+        0 4px 16px rgba(130, 103, 104, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.contacto-card:hover,
+.contacto-form-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 16px 64px rgba(130, 103, 104, 0.15),
+        0 8px 32px rgba(130, 103, 104, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(130, 103, 104, 0.1);
+}
+
+.card-header h3 {
+    color: #826768;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.contacto-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.contacto-detail:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(4px);
+}
+
+.detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(130, 103, 104, 0.1);
+    border-radius: 12px;
+    color: #826768;
+    flex-shrink: 0;
+}
+
+.detail-content h4 {
+    color: #826768;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px 0;
+}
+
+.detail-content p {
+    color: #826768;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    opacity: 0.8;
+}
+
+.contacto-link {
+    color: #826768;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.contacto-link:hover {
+    color: #A2948A;
+    transform: translateX(2px);
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid rgba(130, 103, 104, 0.2);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #826768;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    outline: none;
+    border-color: #826768;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 3px rgba(130, 103, 104, 0.1);
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+    color: rgba(130, 103, 104, 0.5);
+}
+
+.contacto-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contacto-button {
+    background: linear-gradient(135deg, #826768 0%, #A2948A 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.contacto-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(130, 103, 104, 0.3);
+}
+
+.contacto-button:hover::before {
+    left: 100%;
+}
+
+.contacto-button:active {
+    transform: translateY(0);
+}
+
+.contacto-mapa {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 
+        0 16px 64px rgba(130, 103, 104, 0.15),
+        0 8px 32px rgba(130, 103, 104, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contacto-mapa:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 24px 80px rgba(130, 103, 104, 0.2),
+        0 12px 48px rgba(130, 103, 104, 0.15);
+}
+
+.mapa-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(245, 243, 242, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    z-index: 10;
+    min-width: 200px;
+}
+
+.mapa-info h4 {
+    color: #826768;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.mapa-info p {
+    color: #826768;
+    font-size: 0.875rem;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.contacto-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contacto-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        padding: 0 16px;
+    }
+    
+    .contacto-header {
+        margin-bottom: 60px;
+    }
+    
+    .contacto-card,
+    .contacto-form-container {
+        padding: 32px 24px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .contacto-detail {
+        padding: 16px;
+    }
+    
+    .contacto-mapa iframe {
+        height: 400px;
+    }
+    
+    .mapa-overlay {
+        position: static;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-section {
+        padding: 60px 0;
+    }
+    
+    .contacto-card,
+    .contacto-form-container {
+        padding: 24px 16px;
+    }
+    
+    .contacto-detail {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .detail-icon {
+        align-self: center;
+    }
+}
+
+/* ========================================
+   ESCOTEL - ESTILOS UNIFICADOS
+   Inspirado en el diseño de Vercel/Apple
+   ======================================== */
+
+:root {
+  /* Paleta de colores unificada basada en contacto.css */
+  --primary-bg: #F5F3F2;
+  --secondary-bg: #ABABAD;
+  --card-bg: rgba(245, 243, 242, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --text-primary: #826768;
+  --text-secondary: #A2948A;
+  --text-muted: rgba(130, 103, 104, 0.6);
+  --border-light: rgba(130, 103, 104, 0.1);
+  --border-medium: rgba(130, 103, 104, 0.2);
+  --accent-gradient: linear-gradient(135deg, #826768 0%, #A2948A 100%);
+  
+  /* Sombras unificadas */
+  --shadow-light: 0 4px 16px rgba(130, 103, 104, 0.05);
+  --shadow-medium: 0 8px 32px rgba(130, 103, 104, 0.1);
+  --shadow-heavy: 0 16px 64px rgba(130, 103, 104, 0.15);
+  --shadow-glass: 0 8px 32px rgba(130, 103, 104, 0.1), 
+                  0 4px 16px rgba(130, 103, 104, 0.05), 
+                  inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  
+  /* Transiciones y efectos */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-medium: 12px;
+  --radius-large: 20px;
+  --blur-amount: 20px;
+}
+
+/* ========================================
+   NAVBAR UNIFICADO
+   ======================================== */
+
+.navbar-unified {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition-smooth);
+  padding: 0;
+}
+
+.navbar-unified .container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+}
+
+.navbar-unified .navbar-brand {
+  font-weight: 600;
+  color: var(--text-primary) !important;
+  transition: var(--transition-fast);
+}
+
+.navbar-unified .navbar-brand img {
+  height: 32px;
+  transition: var(--transition-fast);
+}
+
+.navbar-unified .navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.navbar-unified .navbar-nav .nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.navbar-unified .navbar-nav .nav-link:hover {
+  color: var(--text-secondary) !important;
+  background: rgba(130, 103, 104, 0.05);
+  transform: translateY(-1px);
+}
+
+.navbar-unified .navbar-nav .nav-link i {
+  opacity: 0.7;
+  transition: var(--transition-fast);
+}
+
+.navbar-unified .navbar-nav .nav-link:hover i {
+  opacity: 1;
+}
+
+/* Dropdown menus */
+.navbar-unified .dropdown-menu {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-glass);
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.navbar-unified .dropdown-item {
+  color: var(--text-primary);
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: var(--transition-fast);
+  border: none;
+}
+
+.navbar-unified .dropdown-item:hover {
+  background: rgba(130, 103, 104, 0.1);
+  color: var(--text-secondary);
+  transform: translateX(2px);
+}
+
+/* Botón de contacto */
+.navbar-unified .btn-contact {
+  background: var(--accent-gradient);
+  color: white !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-unified .btn-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.navbar-unified .btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  color: white !important;
+}
+
+.navbar-unified .btn-contact:hover::before {
+  left: 100%;
+}
+
+/* ========================================
+   SECCIÓN DE LOGOS UNIFICADA
+   ======================================== */
+
+.logos-section-unified {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.logos-section-unified::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(130, 103, 104, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(162, 148, 138, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.logos-grid-unified {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px 20px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logos-grid-unified .logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: var(--radius-medium);
+  transition: var(--transition-smooth);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-light);
+  width: 100%;
+  height: 80px;
+}
+
+.logos-grid-unified .logo-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--border-medium);
+}
+
+/* Eliminar o comentar reglas duplicadas para logos en contacto.css para evitar sobreescritura de filtro */
+/* .logos-grid-unified .logo-item img {
+  filter: grayscale(30%);
+}
+.logos-grid-unified .logo-item:hover img {
+  filter: grayscale(0%);
+} */
+
+/* ========================================
+   FOOTER UNIFICADO
+   ======================================== */
+
+/* Eliminadas reglas específicas de .footer-unified y sus hijos para unificar el estilo global. */
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .logos-grid-unified {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 30px 15px;
+  }
+  
+  .footer-unified .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-unified .container-fluid {
+    padding: 12px 16px;
+  }
+  
+  .logos-section-unified {
+    padding: 40px 0;
+  }
+  
+  .logos-grid-unified {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 20px 10px;
+    padding: 0 16px;
+  }
+  
+  .logos-grid-unified .logo-item {
+    height: 60px;
+    padding: 12px;
+  }
+  
+  .footer-unified {
+    padding: 60px 0 32px;
+  }
+  
+  .footer-unified .footer-section h6::after {
+    width: 30px;
+  }
+  
+  .footer-unified .contact-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logos-grid-unified {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 8px;
+  }
+  
+  .logos-grid-unified .logo-item {
+    height: 50px;
+    padding: 8px;
+  }
+  
+  .footer-unified .social-links {
+    gap: 6px;
+  }
+  
+  .footer-unified .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .navbar-unified .navbar-nav .nav-link {
+    padding: 6px 12px !important;
+    font-size: 13px;
+  }
+  
+  .navbar-unified .btn-contact {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   ANIMACIONES MEJORADAS
+   ======================================== */
+
+@keyframes fadeInGlass {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    backdrop-filter: blur(var(--blur-amount));
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 0.6;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Aplicar animaciones */
+.navbar-unified {
+  animation: slideInFromTop 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logos-section-unified {
+  animation: fadeInGlass 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logos-grid-unified .logo-item {
+  animation: logoAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.logos-grid-unified .logo-item:nth-child(1) { animation-delay: 0.1s; }
+.logos-grid-unified .logo-item:nth-child(2) { animation-delay: 0.15s; }
+.logos-grid-unified .logo-item:nth-child(3) { animation-delay: 0.2s; }
+.logos-grid-unified .logo-item:nth-child(4) { animation-delay: 0.25s; }
+.logos-grid-unified .logo-item:nth-child(5) { animation-delay: 0.3s; }
+.logos-grid-unified .logo-item:nth-child(6) { animation-delay: 0.35s; }
+
+.footer-unified {
+  animation: fadeInGlass 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   UTILIDADES ADICIONALES
+   ======================================== */
+
+.glass-effect {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-glass);
+}
+
+.hover-lift {
+  transition: var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gradient {
+  position: relative;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  background: var(--accent-gradient);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
