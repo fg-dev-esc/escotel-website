@@ -8,6 +8,14 @@
 
 ```
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Bootstrap%20Icons-7952B3?logo=bootstrap&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Material%20Symbols-4285F4?logo=google&logoColor=white&style=for-the-badge" />
+</p>
+
 # ESCOTEL Website
 
 Sitio web corporativo de ESCOTEL - Excelencia en Asistencia
